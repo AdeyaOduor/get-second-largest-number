@@ -1,0 +1,13 @@
+function getSecondLargest(nums) {
+ let largestNum = Math.max(...nums);
+    let filteredNums = [];
+    let secondLargest;
+
+    for(let i = 0; i < nums.length; i++) {
+        if (nums[i] !== largestNum) {
+            filteredNums.push(nums[i]);
+        }
+    }
+
+    return Math.max(...filteredNums);
+}
